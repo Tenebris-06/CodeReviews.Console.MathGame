@@ -1,14 +1,21 @@
 public class Problem
 {
     public string Text;
-    public string Answer;
+    public int Answer;
+
+
+    public Problem(string Text, int Answer)
+    {
+        this.Text = Text;
+        this.Answer = Answer;
+    }
 
     public void setText(string Text)
     {
         this.Text = Text;
     }
 
-    public void setAnswer(string Answer)
+    public void setAnswer(int Answer)
     {
         this.Answer = Answer;
     }
@@ -18,7 +25,7 @@ public class Problem
         return Text;
     }
     
-    public string getAnswer()
+    public int getAnswer()
     {
         return Answer;
     }
