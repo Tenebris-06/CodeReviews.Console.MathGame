@@ -2,6 +2,8 @@ public class Problem
 {
     public string Text;
     public int Answer;
+    public int UserAnswer;
+    public bool CorrectlyAnswered;
 
 
     public Problem(string Text, int Answer)
@@ -28,5 +30,32 @@ public class Problem
     public int getAnswer()
     {
         return Answer;
+    }
+
+    public void setUserAnswer(int userAnswer)
+    {
+        this.UserAnswer = userAnswer;
+    }
+
+    public int getUserAnswer()
+    {
+        return UserAnswer;
+    }
+
+    public string ToString()
+    {
+        string AnswerState;
+
+        switch (CorrectlyAnswered)
+        {
+            case true:
+            AnswerState = "✔";
+            break;
+
+            case false:
+            AnswerState = "✘";
+            break;
+        }
+        return $"{Text.PadRight(12)}{UserAnswer.ToString().PadRight(12)}{Answer.ToString().PadRight(12)}{AnswerState.ToString().PadLeft(10)}";
     }
 }

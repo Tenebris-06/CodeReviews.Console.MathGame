@@ -14,7 +14,7 @@ public static class ProblemGenerator
             
             if (!(operatorValue == MenuOption.Divide)) break;
             
-        } while (rand1 % rand2 != 0);
+        } while (rand2 == 0 || rand1 % rand2 != 0);
 
         string problemText = $"{rand1} {GetOperator(operatorValue)} {rand2} = ?";
         int problemAnswer = -1;
@@ -34,7 +34,7 @@ public static class ProblemGenerator
                 break;
             
             case MenuOption.Divide:
-                problemAnswer = rand1 / rand1;
+                problemAnswer = rand1 / rand2;
                 break;
 
             default:
