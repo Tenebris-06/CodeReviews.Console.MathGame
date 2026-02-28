@@ -1,5 +1,3 @@
-using Microsoft.VisualBasic;
-
 public static class ProblemGenerator
 {
     static Random randomizer = new Random();

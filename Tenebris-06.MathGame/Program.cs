@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-class Program
+﻿class Program
 {
     static void Main(string[] args)
     {
@@ -14,10 +12,8 @@ class Program
         Console.Write("=> ");
 
         int userChoice;
-        if (int.TryParse(Console.ReadLine(), out userChoice))
-        {
-            
-        } else
+        
+        if (!(int.TryParse(Console.ReadLine(), out userChoice)))
         {
             Console.WriteLine("Invalid Input!");
         }
