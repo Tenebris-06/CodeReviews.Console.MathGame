@@ -53,14 +53,14 @@ class Program
         {
             // cast the userChoice to it's corresponding enum option
 
-            Problem generatedProblem = ProblemGenerator.generateProblem((MenuOption)userChoice);
+            Problem generatedProblem = ProblemGenerator.GenerateProblem((MenuOption)userChoice);
             ProblemSet.Add(generatedProblem);
             Console.WriteLine($"\t == Problem {i}: ==");
             Console.WriteLine($"{generatedProblem.Text}");
             Console.Write("=> ");
             int.TryParse(Console.ReadLine(), out int userAnswer);
 
-            generatedProblem.setUserAnswer(userAnswer);
+            generatedProblem.SetUserAnswer(userAnswer);
             
             if (userAnswer == generatedProblem.Answer)
             {

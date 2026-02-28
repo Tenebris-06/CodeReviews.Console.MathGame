@@ -12,37 +12,37 @@ public class Problem
         this.Answer = Answer;
     }
 
-    public void setText(string Text)
+    public void SetText(string Text)
     {
         this.Text = Text;
     }
 
-    public void setAnswer(int Answer)
+    public void SetAnswer(int Answer)
     {
         this.Answer = Answer;
     }
 
-    public string getText()
+    public string GetText()
     {
         return Text;
     }
     
-    public int getAnswer()
+    public int GetAnswer()
     {
         return Answer;
     }
 
-    public void setUserAnswer(int userAnswer)
+    public void SetUserAnswer(int userAnswer)
     {
         this.UserAnswer = userAnswer;
     }
 
-    public int getUserAnswer()
+    public int GetUserAnswer()
     {
         return UserAnswer;
     }
 
-    public string ToString()
+    public override string ToString()
     {
         string AnswerState;
 
@@ -56,6 +56,6 @@ public class Problem
             AnswerState = "✘";
             break;
         }
-        return $"{Text.PadRight(12)}{UserAnswer.ToString().PadRight(12)}{Answer.ToString().PadRight(12)}{AnswerState.ToString().PadLeft(10)}";
+        return $"{Text.PadRight(12)}{UserAnswer.ToString().PadRight(12)}{Answer.ToString().PadRight(12)}{AnswerState.PadLeft(10)}";
     }
 }

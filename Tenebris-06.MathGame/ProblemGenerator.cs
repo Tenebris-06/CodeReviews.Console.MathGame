@@ -5,7 +5,7 @@ public static class ProblemGenerator
     static Random randomizer = new Random();
     static int rand1;
     static int rand2;
-    public static Problem generateProblem(MenuOption operatorValue)
+    public static Problem GenerateProblem(MenuOption operatorValue)
     {
         do
         {
